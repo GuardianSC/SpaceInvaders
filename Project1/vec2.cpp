@@ -1,6 +1,6 @@
 #include "vec2.h"
 #include <cmath>
-
+#include <ctime>
 
 float distance(vec2 a, vec2 b)
 {
@@ -58,4 +58,16 @@ bool operator==(vec2 a, vec2 b)
 vec2 eulerIntegration(vec2 pos, vec2 vel, float dt)
 {
 	return pos + vel * dt;
+}
+
+float randRange(float min, float max)
+{
+	float alpha = rand() / (RAND_MAX*1.f);
+	
+	return min + alpha*(max - min);
+}
+
+float lerp(float start, float end, float alpha)
+{
+	start + alpha *(end - start);
 }

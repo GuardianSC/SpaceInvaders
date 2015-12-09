@@ -1,8 +1,13 @@
 #include "GameObject.h"
 #include "sfwdraw.h"
 
+
+GameState *GameObject::gs;
+
 void GameObject::update()
 {
+	if (!active)return;
+
 	pos = eulerIntegration(pos, vel, sfw::getDeltaTime());
 
 	onUpdate();
@@ -10,16 +15,21 @@ void GameObject::update()
 
 void GameObject::draw()
 {
-	sfw::drawCircle(pos.x, pos.y, radius);
+	if (!active)return;
+
+	sfw::drawCircle(pos.x, pos.y, radius, 12, color);
 
 	onDraw();
 }
 
 void collides(GameObject &a, GameObject &b)
 {
-	if (circleOverlap(a.pos, a.radius, b.pos, b.radius))
+	if (a.active && b.active)
 	{
-		a.onCollision(b);
-		b.onCollision(a);
+		if (circleOverlap(a.pos, a.radius, b.pos, b.radius))
+		{
+			a.onCollision(b);
+			b.onCollision(a);
+		}
 	}
 }

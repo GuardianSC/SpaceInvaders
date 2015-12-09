@@ -4,11 +4,15 @@
 class Player : public GameObject
 {
 public:
-	Player(float x, float y) : GameObject(x, y, 35)
+
+	float delay, rof;
+	int health;
+	Player(float x, float y) : GameObject(x, y, 35), delay (0), rof(.2f), health(3)
 	{
-		speed = 80;
+		speed = 100;
+		color = BLUE;
 	}
 
-
+	virtual void onCollision(GameObject &o);
 	void onUpdate();
 };
