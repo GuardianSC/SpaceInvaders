@@ -9,14 +9,21 @@
 
 
 
-
-
+unsigned spritePlayer;
+unsigned spriteEnemy;
+unsigned spriteBackground;
+unsigned spriteFont;
 
 int main()
 {
 	sfw::initContext(WINDOW_WIDTH, WINDOW_HEIGHT, "Space Invaders");
 
-	//Player go((BOUNDS_RIGHT + BOUNDS_LEFT) / 2, BOUNDS_BOTTOM);
+	spritePlayer = sfw::loadTextureMap("./images/player.png");
+	spriteEnemy = sfw::loadTextureMap("./images/enemy.png");
+	spriteBackground = sfw::loadTextureMap("./images/background.png");
+
+
+	
 
 	GameState gs;
 
@@ -25,11 +32,6 @@ int main()
 		gs.update();
 
 		gs.draw();
-
-
-
-
-
 	}
 
 

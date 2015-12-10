@@ -9,6 +9,7 @@ public:
 	int health;
 	Player(float x, float y) : GameObject(x, y, 35), delay (0), rof(.2f), health(3)
 	{
+		sprite = spritePlayer;
 		speed = 100;
 		color = BLUE;
 	}

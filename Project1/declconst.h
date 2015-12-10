@@ -10,3 +10,8 @@
 #define BOUNDS_RIGHT WINDOW_WIDTH - 80
 
 class GameState;
+
+extern unsigned spritePlayer;
+extern unsigned spriteEnemy;
+extern unsigned spriteBackground;
+extern unsigned spriteFont;

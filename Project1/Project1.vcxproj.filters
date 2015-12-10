@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="images">
+      <UniqueIdentifier>{4b290cb0-61d9-4b4a-bb91-fa49e3dc7cd1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="vec2.cpp">
@@ -62,5 +65,22 @@
     <ClInclude Include="Particle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="images\enemy2.png">
+      <Filter>images</Filter>
+    </Image>
+    <Image Include="images\player.png">
+      <Filter>images</Filter>
+    </Image>
+    <Image Include="images\enemy.png">
+      <Filter>images</Filter>
+    </Image>
+    <Image Include="images\background.png">
+      <Filter>images</Filter>
+    </Image>
+    <Image Include="images\fontmap.png">
+      <Filter>images</Filter>
+    </Image>
   </ItemGroup>
 </Project>

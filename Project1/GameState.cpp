@@ -14,6 +14,11 @@ void GameState::update()
 		enemies[i].update();
 	}
 
+	for (int i = 0; i < particles.size(); i++)
+	{
+		particles[i].update();
+	}
+
 	for (int i = 0; i < bullets.size(); ++i)
 	{
 		collides(player, bullets[i]);
@@ -39,7 +44,6 @@ void GameState::update()
 
 void GameState::draw()
 {
-
 	player.draw();
 	for (int i = 0; i < bullets.size(); i++)
 	{
@@ -79,4 +83,18 @@ void GameState::spawnEnemy(float x, float y)
 		}
 	}
 	enemies.push_back(e);
+}
+
+void GameState::spawnParticle(float x, float y, float a_startRadius, float a_endRadius, float a_lifetime, unsigned a_color)
+{
+	Particle p(x, y, a_startRadius, a_endRadius, a_lifetime, a_color);
+
+	for (int i = 0; i < particles.size(); ++i)
+	{
+		if (!particles[i].active)
+		{
+			particles[i] = p;
+			return;
+		}
+	}
 }

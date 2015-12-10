@@ -69,5 +69,5 @@ float randRange(float min, float max)
 
 float lerp(float start, float end, float alpha)
 {
-	start + alpha *(end - start);
+	return start + alpha *(end - start);
 }

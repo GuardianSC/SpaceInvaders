@@ -3,6 +3,7 @@
 #include "Bullet.h"
 #include "Enemy.h"
 #include "declconst.h"
+#include "Particle.h"
 #include <vector>
 
 class GameState
@@ -11,6 +12,7 @@ public:
 	Player player;
 	std::vector<Bullet> bullets;
 	std::vector<Enemy> enemies;
+	std::vector<Particle> particles;
 	float spawnRate, spawnDelay;
 
 	unsigned score;
@@ -25,5 +27,6 @@ public:
 	void draw();
 	void spawnBullet(float x, float y, float a_speed);
 	void spawnEnemy(float x, float y);
+	void spawnParticle(float x, float y, float a_startRadius, float a_endRadius, float a_lifetime, unsigned a_color);
 };
 
