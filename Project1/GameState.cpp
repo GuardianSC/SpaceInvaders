@@ -66,6 +66,8 @@ void GameState::update()
 
 void GameState::draw()
 {
+	sfw::drawTexture(spriteBackground, WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2,	WINDOW_WIDTH, WINDOW_HEIGHT);
+
 	player.draw();
 	for (int i = 0; i < bullets.size(); i++)
 	{
@@ -75,12 +77,6 @@ void GameState::draw()
 	{
 		enemies[i].draw();
 	}
-
-	
-
-
-	sfw::drawTexture(spriteBackground, WINDOW_WIDTH / 2, WINDOW_HEIGHT / WINDOW_WIDTH, WINDOW_HEIGHT);
-
 }
 
 void GameState::spawnBullet(float x, float y, float a_speed)

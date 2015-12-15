@@ -7,7 +7,7 @@ public:
 
 	float delay, rof;
 	int health;
-	Player(float x, float y) : GameObject(x, y, 35), delay (0), rof(.1f), health(3)
+	Player(float x, float y) : GameObject(x, y, 35), delay (0), rof(.5f), health(3)
 	{
 		sprite = spritePlayer;
 		speed = 100;

@@ -5,8 +5,8 @@
 #define WINDOW_HEIGHT 600
 
 #define BOUNDS_TOP WINDOW_HEIGHT - 60
-#define BOUNDS_BOTTOM 0
-#define BOUNDS_LEFT 0
+#define BOUNDS_BOTTOM 35
+#define BOUNDS_LEFT 35
 #define BOUNDS_RIGHT WINDOW_WIDTH - 80
 
 #define ORANGE 0xffA500ff
@@ -24,6 +24,5 @@ extern unsigned spriteBullet;
 enum STATE {SPLASH, PLAY, GAME, PAUSE, VICTORY, EXIT};
 
 extern STATE applicationState;
-
 
 void drawFontCentered(unsigned sprite, const char* text, unsigned x, unsigned y, unsigned w, unsigned h, unsigned color = 0xffffffff);

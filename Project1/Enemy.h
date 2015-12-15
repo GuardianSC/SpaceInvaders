@@ -5,9 +5,9 @@ class Enemy : public GameObject
 {
 public:
 
-	float delay, rof;
+	float delay, rof, trailDelay, trailRate;
 
-	Enemy(float x, float y) : GameObject(x, y, 35), delay(0), rof(.1f)
+	Enemy(float x, float y) : GameObject(x, y, 35), delay(0), rof(1.2f), trailDelay(0), trailRate(.2f)
 	{
 		sprite = spriteEnemy;
 		color = WHITE;

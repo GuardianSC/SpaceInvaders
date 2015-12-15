@@ -35,4 +35,9 @@ void SplashState::draw()
 	y = WINDOW_HEIGHT * 8 / 16;
 	drawFontCentered(spriteFont, "Chris Lutz", x, y, s, s);
 	drawFontCentered(spriteFont, "christopher.lutz@students.aie.au.edu", x, y - 19, 16, 16, MAGENTA);
+
+	s = 16;
+	y = WINDOW_HEIGHT * 20 / 40;
+	drawFontCentered(spriteFont, "Controls", x, y - 35, s, s);
+	drawFontCentered(spriteFont, "A, D Move      W Shoot", x, y - 55, s, s, color);
 }
