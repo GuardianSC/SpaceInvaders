@@ -1,4 +1,6 @@
 #include "GameState.h"
+#include <string>
+#include <fstream>
 
 void GameState::update()
 {
@@ -40,6 +42,26 @@ void GameState::update()
 		spawnEnemy(randRange(BOUNDS_LEFT, BOUNDS_RIGHT), BOUNDS_TOP);
 	}
 
+	if (applicationState == GAME)
+	{
+		if (!player.active)
+		{
+			std::fstream fout("scores.dat", std::ios_base::out | std::ios_base::app);
+
+			fout << score << std::endl;
+			fout.close();
+
+
+			applicationState = VICTORY;
+		}
+		if (sfw::getKey('P'))
+		{
+			applicationState = PAUSE;
+		}
+	}
+	else player.setInactive();
+
+
 }
 
 void GameState::draw()
@@ -53,6 +75,12 @@ void GameState::draw()
 	{
 		enemies[i].draw();
 	}
+
+	
+
+
+	sfw::drawTexture(spriteBackground, WINDOW_WIDTH / 2, WINDOW_HEIGHT / WINDOW_WIDTH, WINDOW_HEIGHT);
+
 }
 
 void GameState::spawnBullet(float x, float y, float a_speed)

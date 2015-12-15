@@ -8,11 +8,11 @@ public:
 
 	Bullet(float x, float y, float a_speed) : GameObject(x, y, 12), lifespan(3.f)
 	{
+		sprite = spriteBullet;
 		speed = a_speed;
-		color = CYAN;
+		color = WHITE;
 		vel.y = speed;
 	}
-
 
 	void onUpdate()
 	{
@@ -22,6 +22,4 @@ public:
 			active = false;
 		}
 	}
-
-
 };

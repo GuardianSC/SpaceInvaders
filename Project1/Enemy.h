@@ -7,7 +7,7 @@ public:
 
 	float delay, rof;
 
-	Enemy(float x, float y) : GameObject(x, y, 35), delay(0), rof(.2f)
+	Enemy(float x, float y) : GameObject(x, y, 35), delay(0), rof(.1f)
 	{
 		sprite = spriteEnemy;
 		color = WHITE;

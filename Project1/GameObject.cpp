@@ -18,7 +18,7 @@ void GameObject::draw()
 	if (!active)return;
 
 	sfw::drawTexture(sprite, pos.x, pos.y, radius * 2, radius * 2, 0, true, 0, color);
-	sfw::drawCircle(pos.x, pos.y, radius, 12, color);
+	//sfw::drawCircle(pos.x, pos.y, radius, 12, color);
 
 	onDraw();
 }

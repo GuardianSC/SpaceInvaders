@@ -125,23 +125,31 @@
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="PauseState.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SplashState.cpp" />
     <ClCompile Include="vec2.cpp" />
+    <ClCompile Include="VictoryState.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaseState.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="declconst.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="Particle.h" />
+    <ClInclude Include="PauseState.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="sfwdraw.h" />
+    <ClInclude Include="SplashState.h" />
     <ClInclude Include="vec2.h" />
+    <ClInclude Include="VictoryState.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="images\background.png" />
+    <Image Include="images\bullet.png" />
     <Image Include="images\enemy.png" />
     <Image Include="images\enemy2.png" />
     <Image Include="images\fontmap.png" />

@@ -20,7 +20,17 @@ public:
 	GameState() : player((BOUNDS_RIGHT + BOUNDS_LEFT) / 2, BOUNDS_BOTTOM), spawnDelay(0), spawnRate(1.8f), score(0)
 	{
 		GameObject::gs = this;
-		spawnEnemy(player.pos.x, BOUNDS_TOP);
+	}
+
+	void reset()
+	{
+		player = Player((BOUNDS_RIGHT + BOUNDS_LEFT) / 2, BOUNDS_BOTTOM);
+		bullets.clear();
+		enemies.clear();
+		particles.clear();
+		spawnRate = 1.8f;
+		score = 0;
+		spawnDelay = 0;
 	}
 
 	void update();
